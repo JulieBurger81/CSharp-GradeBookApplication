@@ -20,6 +20,7 @@ namespace GradeBook.GradeBooks
         {
             Name = name;
             Students = new List<Student>();
+            IsWeighted = isWeighted;
         }
 
         public void AddStudent(Student student)
@@ -130,7 +131,7 @@ namespace GradeBook.GradeBooks
                     GPA = 0;
                     break;
             }
-            if (IsWeighted == true)
+            if (IsWeighted && (studentType == StudentType.DualEnrolled || studentType == StudentType.Honors))
             {
                 GPA += 1;
             }
