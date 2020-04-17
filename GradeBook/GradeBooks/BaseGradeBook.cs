@@ -108,26 +108,26 @@ namespace GradeBook.GradeBooks
 
         public virtual double GetGPA(char letterGrade, StudentType studentType)
         {
-            int GPA;
+            var GPA = 0;
             switch (letterGrade)
             {
                 case 'A':
-                    int GPA = 4;
+                    GPA = 4;
                     break;
                 case 'B':
-                    int GPA = 3;
+                    GPA = 3;
                     break;
                 case 'C':
-                    int GPA = 2;
+                    GPA = 2;
                     break;
                 case 'D':
-                    int GPA = 1;
+                    GPA = 1;
                     break;
                 case 'F':
-                    int GPA = 0;
+                    GPA = 0;
                     break;
                 default:
-                    int GPA = 0;
+                    GPA = 0;
                     break;
             }
             if (IsWeighted == true)
