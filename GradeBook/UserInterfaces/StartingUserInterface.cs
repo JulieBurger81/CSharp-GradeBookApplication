@@ -31,7 +31,7 @@ namespace GradeBook.UserInterfaces
                 Console.WriteLine("{0} was not recognized, please try again.", command);
         }
 
-        public static void CreateCommand(string command)
+        public static void CreateCommand(var command)
         {
             var parts = command.Split(' ');
             if (parts.Length != 4)
@@ -41,7 +41,7 @@ namespace GradeBook.UserInterfaces
             }
             var name = parts[1];
             var type = parts[2];
-            var isWeighted = parts[3];
+            bool isWeighted = parts[3];
 
             BaseGradeBook gradeBook; 
             if (type == "standard")
